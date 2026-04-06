@@ -41,6 +41,8 @@ Vinheria-Agnello
  ┃ ┃ ┃ ┃ ┗ 📜VinhoTinto_SuavePérgola_750ml-VinicolaCampestre.png
  ┃ ┗ 📂videos
  ┃ ┃ ┗ 📜tutorial-vinho.mp4
+ ┣ 📂js
+ ┃ ┗ 📜script.js
  ┣ 📂css
  ┃ ┗ 📜style.css
  ┗ 📂pages
