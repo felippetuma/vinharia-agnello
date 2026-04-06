@@ -11,9 +11,9 @@ alert(`Quantidade no Estoque já está disponível no console!`);
 
 alert("O Cadastro foi realizado com sucesso! Veja mais detalhes no console.");
 
-// Console.log onde exibe o nome do vinho
+// Console.log onde exibe o nome do vinho selecionado
 console.log("Nome do Vinho: " + nomeVinho);
-// Console.log onde exibe o tipo do vinho
+// Console.log onde exibe o tipo do vinho selecionado
 console.log("Tipo do Vinho: " + tipoVinho);
 // Console.log onde exibe o safra do vinho
 console.log("Safra do Vinho: " + safraVinho);
