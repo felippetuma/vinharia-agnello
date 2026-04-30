@@ -63,3 +63,9 @@ h6::selection {
 .entrar-em-contato button:active {
     transform: scale(0.99);
 }
+
+/* Membros */
+.membro:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
