@@ -75,3 +75,16 @@ Contato: Implementamos um canal de comunicação direta que vai além do básico
 ### 🔗 Link GitHub Pages
 
 [Vinheria Agnello](https://felippetuma.github.io/vinheria-agnello/)
+
+### ✨ Efeitos Visuais:
+- Pseudo-elementos:
+-- ::selection (Aplica cor ao fundo e branco ao texto quando o usuario seleciona o conteudo)
+-- ::placeholder (Define placeholders dos campos)
+
+- Pseudo-classes:
+-- :hover (Ativa quando o cursor passa sobre o elemento, alterando a aparencia)
+-- :focus (Ativa quando um campo de form recebe foco)
+-- :active (Ativa quando um elemento é clicado)
+
+- Animações:
+-- Utiliza transforms (translateY, scale) e transições de cor/sombra
