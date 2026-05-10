@@ -1,28 +1,50 @@
-vinhosCadastrados = 0;
-vinhosEstoqueBaixo = 0;
+let vinhosCadastrados = 0;
+let vinhosEstoqueBaixo = 0;
+let vinhoMaisAntigo = "";
 
 function verificarVinho(nome, quantidade, idade) {
     if (quantidade < 5) {
         vinhosEstoqueBaixo++;
     }
 
+    // TODO: Inserir a variavel "vinhoClassificacao" nos if statement (só remover os comentarios)
     vinhoClassificacao = "";
 
-    if (idade < 2) {
-    //  vinhoClassificao = "Jovem"
-    } else if (idade > 3) {
-    // vinhoClassificao = "Jovem"
-    } else if (idade > 6) {
-    // vinhoClassificao = "Jovem"
+    if (idade <= 2) {
+        //  vinhoClassificao = "Jovem";
+    } else if (idade <= 6) {
+        // vinhoClassificao = "Amadurecido";
+    } else {
+        // vinhoClassificao = "Antigo";
     }
 
-    alert(`O vinho ${nome} é classificado como ${vinhoClassificacao}`)
+    // TODO: Completar o alert(), exibindo o nome, classificação, e provavel a quantia
+    alert(`O vinho ${nome} é classificado como ${vinhoClassificacao}`);
+}
+
+// TODO: Verificar/pegar o vinho e ver se é mais antigo que o "vinhoMaisAntigo"
+// e inserir na variavel 
+function pegarVinhoAntigo(nomeVinho) {
+
+}
+
+// TODO: Exibir os dados: (Quantos cadastros totais), (Vinhos estoque baixo) e (Vinho mais antigo), 
+// só dar um prompt()
+function exibirDadosFinais() {
+
 }
 
 while (true) {
+    vinhosCadastrados++;
+    
     nomeVinho = prompt("Cadastre o nome do vinho: ");
     quantidadeVinho = prompt("Insira a quantidade de vinho(s): ");
     idadeVinho = prompt("Insira a idade do vinho: ");
 
+    verificarVinho(nomeVinho, quantidadeVinho, idadeVinho)
 
+    let continuar = prompt("Cadastrar outro? (S/N)");
+    if (continuar === "N") break;
 }
+
+exibirDadosFinais()
