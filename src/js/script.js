@@ -42,7 +42,7 @@ while (true) {
     verificarVinho(nomeVinho, quantidadeVinho, idadeVinho)
     vinhosCadastrados++;
     
-    let continuar = prompt("Cadastrar outro? (S/N)").trim();
+    let continuar = prompt("Deseja cadastrar outro vinho? (S/N)").trim();
     if (continuar.toUpperCase() === "N") break;
 }
 
