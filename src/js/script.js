@@ -1,35 +1,50 @@
-let nomeVinho = prompt("Digite o nome do vinho:");
-alert(`Nome do Vinho já está disponível no console!`);
+let vinhosCadastrados = 0;
+let vinhosEstoqueBaixo = 0;
+let vinhoMaisAntigo = "";
 
-// Console.log onde exibe o nome do vinho selecionado
-console.log("Nome do Vinho: " + nomeVinho);
+function verificarVinho(nome, quantidade, idade) {
+    if (quantidade < 5) {
+        vinhosEstoqueBaixo++;
+    }
 
-let tipoVinho = prompt("Digite o tipo do vinho: Tinto, Branco, Rosé");
-alert(`Tipo de Vinho já está disponível no console!`);
+    // TODO: Inserir a variavel "vinhoClassificacao" nos if statement (só remover os comentarios)
+    vinhoClassificacao = "";
 
-// Console.log onde exibe o tipo do vinho selecionado
-console.log("Tipo do Vinho: " + tipoVinho);
+    if (idade <= 2) {
+        //  vinhoClassificao = "Jovem";
+    } else if (idade <= 6) {
+        // vinhoClassificao = "Amadurecido";
+    } else {
+        // vinhoClassificao = "Antigo";
+    }
 
-let safraVinho = prompt("Digite a safra do vinho:");
-alert(`Safra do Vinho já está disponível no console!`);
+    // TODO: Completar o alert(), exibindo o nome, classificação, e provavel a quantia
+    alert(`O vinho ${nome} é classificado como ${vinhoClassificacao}`);
+}
 
-// Console.log onde exibe o safra do vinho
-console.log("Safra do Vinho: " + safraVinho);
+// TODO: Verificar/pegar o vinho e ver se é mais antigo que o "vinhoMaisAntigo"
+// e inserir na variavel 
+function pegarVinhoAntigo(nomeVinho) {
 
-let precoVinho = parseFloat(prompt("Digite o preço do vinho:"));
-alert(`Preço do Vinho já está disponível no console!`);
+}
 
-// Console.log para a variavel " precoVinho"
-console.log("Preço: R$ " + precoVinho.toFixed(2));
+// TODO: Exibir os dados: (Quantos cadastros totais), (Vinhos estoque baixo) e (Vinho mais antigo), 
+// só dar um prompt()
+function exibirDadosFinais() {
 
-let quantidadeVinho = parseInt(prompt("Digite a quantidade de garrafas no estoque:"));
-alert(`Quantidade no Estoque já está disponível no console!`);
+}
 
-// Console.log para a variavel " quantidadeVinho"
-console.log("Quantidade no Estoque: " + quantidadeVinho);
+while (true) {
+    vinhosCadastrados++;
+    
+    nomeVinho = prompt("Cadastre o nome do vinho: ");
+    quantidadeVinho = prompt("Insira a quantidade de vinho(s): ");
+    idadeVinho = prompt("Insira a idade do vinho: ");
 
-alert("O Cadastro foi realizado com sucesso! Veja mais detalhes no console.");
+    verificarVinho(nomeVinho, quantidadeVinho, idadeVinho)
 
+    let continuar = prompt("Cadastrar outro? (S/N)");
+    if (continuar === "N") break;
+}
 
-// Alert para a descrição do cadastro 
-alert(`Descrição do Cadastro:\n\n Nome do vinho: ${nomeVinho}\n Tipo de Vinho: ${tipoVinho}\n Safra: ${safraVinho}\n Preço: R$ ${precoVinho}\n Quantidade no Estoque: ${quantidadeVinho}`);
+exibirDadosFinais()
