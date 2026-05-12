@@ -1,8 +1,10 @@
+// Variáveis para armazenar os dados dos vinhos
 let vinhosCadastrados = 0;
 let vinhosEstoqueBaixo = 0;
 let vinhoMaisAntigo = "";
 let vinhoMaisAntigoIdade = 0;
 
+// Função verificarVinho() para classificar o vinho com base na idade e verificar a quantidade em estoque.
 function verificarVinho(nome, quantidade, idade) {
     if (quantidade < 5) {
         vinhosEstoqueBaixo++;
@@ -23,6 +25,7 @@ function verificarVinho(nome, quantidade, idade) {
     pegarVinhoAntigo(nome, idade);
 }
 
+// Se o Vinho é Antigo, então o sistem deve usar a função pegarVinhoAntigo() para comparar a idade do vinho atual com o vinho mais antigo registrado, e atualizar as variáveis vinhoMaisAntigo e vinhoMaisAntigoIdade se necessário.
 function pegarVinhoAntigo(nomeVinho, idadeVinho) {
     if (vinhoMaisAntigo === "" || idadeVinho > vinhoMaisAntigoIdade) {
         vinhoMaisAntigo = nomeVinho;
