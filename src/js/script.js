@@ -33,10 +33,10 @@ function pegarVinhoAntigo(nomeVinho, idadeVinho) {
     }
 }
 
-// TODO: Exibir os dados: (Quantos cadastros totais), (Vinhos estoque baixo) e (Vinho mais antigo), 
-// só dar um prompt()
-function exibirDadosFinais() {
 
+function exibirDadosFinais() {
+    const mensagemRelatorio = `Relatório Final:\n\nTotal de vinhos cadastrados: ${vinhosCadastrados}\nVinhos com estoque baixo: ${vinhosEstoqueBaixo}\nVinho mais antigo: ${vinhoMaisAntigo} (${vinhoMaisAntigoIdade} anos)`;
+    alert(mensagemRelatorio);
 }
 
 while (true) {
