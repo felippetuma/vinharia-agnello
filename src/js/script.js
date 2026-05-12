@@ -1,6 +1,7 @@
 let vinhosCadastrados = 0;
 let vinhosEstoqueBaixo = 0;
 let vinhoMaisAntigo = "";
+let vinhoMaisAntigoIdade = 0;
 
 function verificarVinho(nome, quantidade, idade) {
     if (quantidade < 5) {
@@ -22,10 +23,11 @@ function verificarVinho(nome, quantidade, idade) {
     pegarVinhoAntigo(nome, idade);
 }
 
-// TODO: Verificar/pegar o vinho e ver se é mais antigo que o "vinhoMaisAntigo"
-// e inserir na variavel 
-function pegarVinhoAntigo(nomeVinho) {
-
+function pegarVinhoAntigo(nomeVinho, idadeVinho) {
+    if (vinhoMaisAntigo === "" || idadeVinho > vinhoMaisAntigoIdade) {
+        vinhoMaisAntigo = nomeVinho;
+        vinhoMaisAntigoIdade = idadeVinho;
+    }
 }
 
 // TODO: Exibir os dados: (Quantos cadastros totais), (Vinhos estoque baixo) e (Vinho mais antigo), 
