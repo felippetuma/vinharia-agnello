@@ -33,12 +33,13 @@ function pegarVinhoAntigo(nomeVinho, idadeVinho) {
     }
 }
 
-// TODO: Exibir os dados: (Quantos cadastros totais), (Vinhos estoque baixo) e (Vinho mais antigo), 
-// só dar um prompt()
+// exibibe os dados finais que o usuario forneceu 
 function exibirDadosFinais() {
-
+    const mensagemRelatorio = `Relatório Final:\n\nTotal de vinhos cadastrados: ${vinhosCadastrados}\nVinhos com estoque baixo: ${vinhosEstoqueBaixo}\nVinho mais antigo: ${vinhoMaisAntigo} (${vinhoMaisAntigoIdade} anos)`;
+    alert(mensagemRelatorio);
 }
 
+// inicia um processo para recolher os dados para o inventário de vinhos, repetindo o cadastro até que o utilizador decida parar.
 while (true) {
     nomeVinho = prompt("Cadastre o nome do vinho: ");
     quantidadeVinho = prompt("Insira a quantidade de vinho(s): ");
